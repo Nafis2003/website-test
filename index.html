@@ -53,7 +53,8 @@
    </div>
    </nav>
 
-  <div id="home" class="d-flex justify-content-center align-items-center">
+  <div id="home" class="d-flex justify-content-center align-items-center position-relative">
+  				<img src="images/bg.svg" id="bg-home" alt="background image">
   <div class="container d-flex justify-content-center align-items-center px-md-5">
  
   <picture>
@@ -242,13 +243,17 @@
   <script type="text/javascript">
 
 var home=document.getElementById("home");
+var bgImg=document.getElementById("bg-home");
+
 window.onload=function(){
 var height=window.innerHeight;
-home.style.minHeight=height+"px";
+home.style.height=height+"px";
+bgImg.style.height=height+"px";
 };
 window.onresize=function(){
 var height=window.innerHeight;
-home.style.minHeight=height+"px";
+home.style.height=height+"px";
+bgImg.style.height=height+"px";
 };
 
 ScrollReveal().reveal("#img-1",{delay:0,duration:2000,origin:"bottom", distance:"40px"});
